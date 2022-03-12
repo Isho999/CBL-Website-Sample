@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+    #showcase .phone-jl-logo, .phone-tap-logo{
+        display: none;
+    }
+
+.background {
+    background: url("../img/gradback---purple.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 600px;
+}
+
+nav .header-nav {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.header-nav ul {
+    margin-top: 3em;
+    float: right;
+}
+
+.header-nav li {
+    display: inline;
+}
+
+.header-nav a {
+    position: relative;
+    font-weight: 400;
+    padding: 0 20px;
+    color: white;
+  }
+  
+  .header-nav a:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    top: 25px;
+    width: 0;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  
+  .header-nav a:hover:after {
+    width: 100%;
+  }
+
+  .header-nav .active-nav:after {
+    width: 100%;
+  }
+
+header img {
+    margin-top: 0.5em;
+    margin-left: 2em;
+}
+
+
+#showcase {
+    color: white;
+}
+
+#showcase h1, p {
+    padding: 0.4em;
+}
+
+#showcase h1 {
+    font-size: 350%;
+    margin-left: 0.5em;
+}
+
+#showcase p {
+    font-size: 120%;
+    margin-left: 2.1em;
+    color: white;
+    text-align: left;
+}
+
+article {
+    margin: 2em 0 0 2.5em;
+    padding: 0.5%;
+}
+
+#article1 h1 {
+    font-size: 52px;
+    border-left: #8D41B0 5px solid;
+    padding: 0.5%;
+    color: #8D41B0;
+}
+
+#article1 p {
+    color: black;
+    width: 50%;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+article img {
+    float: right;
+    margin-top: -18em;
+    margin-right: 2%;
+    padding: 20px;
+}
+
+#article2 {
+    margin-top: 6em;
+    width: 95%;
+}
+
+#artice2 h1, p {
+    text-align: center;
+    color: black;
+}
+
+#article2 h1 {
+    text-align: center;
+    font-size: 52px;
+    border-bottom: #8D41B0 5px solid;
+    padding: 0.5%;
+    color: #8D41B0;
+}
+
+#article2 p {
+    color: black;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.jl-img {
+    margin-right: 5.3%;
+}
+
+#startpoint {
+    text-align: center;
+    margin-top: 3em;
+    height: 100%;
+    padding: 60px;
+}
+
+#startpoint h1 {
+    font-size: 55px;
+    padding: 20px;
+    color: #8D41B0;
+}
+
+#startpoint button {
+    background-color: #8D41B0;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 800;
+    color: white;
+}
+
+footer {
+    background-color: #8D41B0;
+    height: 125px;
+}
+
+.footer-nav img {
+    margin-top: 0.8em;
+    margin-left: 2em;
+}
+
+.footer-nav ul {
+    margin: -3em 0 0 15em;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    font-weight: 400;
+    padding: 0 20px;
+    color: white;
+}
+
+.footer-nav .tap-logo {
+    float: right;
+    margin-top: -3em;
+}
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+}
+
+@media screen and (max-width: 768px) {
+    /* start of medium tablet styles */
+    .background {
+        height: 400px;
+    }
+    .header-nav img {
+        width: 90px;
+        height: auto;
+    }
+    .header-nav a {
+        font-size: 15px;
+    }
+    #showcase h1, p {
+        margin-top: 1em;
+    }
+    #showcase h1 {
+        font-size: 30px;
+        margin-left: 1.3em;
+    }
+    #showcase p {
+        width: 550px;
+    }
+    
+    #article1 h1 {
+        font-size: 40px;
+    }
+    #article1 p {
+        text-align: justify;
+    }
+    #article2 {
+        width: 87%;
+    }
+    #article2 p {
+        font-size: 18px;
+        text-align: center;
+    }
+    #article2 h1 {
+        font-size: 40px;
+    }
+    #article1 img {
+        margin-top: -28em;
+    }
+    #startpoint {
+        margin-top: -2em;
+    }
+    #showcase p {
+        width: 25em;
+    }
+    .footer-nav ul {
+        margin: -3em 0 0 9em;
+    }
+    .footer-nav a {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    .footer-nav img {
+        width: 90px;
+    }
+    .footer-nav .tap-logo {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 583px) {
+    /* start of phone styles */
+    body {
+        background-image: linear-gradient(to bottom right, #8D41B0, white);
+        background-size: cover;
+    }
+    .background {
+        background: none;
+    }
+    .jl-main-logo {
+        display: none;
+    }
+    header {
+        text-align: center;
+    }
+
+    #showcase {
+        background: white;
+        display: block;
+        width: 73%;
+        padding: 1em;
+        margin: 5em auto 0 auto ;
+        border-radius: 1em;
+    }
+
+    #showcase h1{
+        padding: 0;
+        margin-top: 2.5em;
+        text-align: center;
+        color: black;
+        width: auto;
+    }
+    #showcase p{
+        padding: 0;
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        width: auto;
+    }
+    #showcase .phone-jl-logo{
+        display: block;
+        float: left;
+    }
+    #showcase .phone-tap-logo{
+        display: block;
+        float: right;
+    }
+}

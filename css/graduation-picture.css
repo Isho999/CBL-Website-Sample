@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    background-color: #8D41B0;
+}
+
+nav .header-nav {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.header-nav ul {
+    margin-top: 3em;
+    float: right;
+}
+
+.header-nav li {
+    display: inline;
+}
+
+.header-nav a {
+    position: relative;
+    font-weight: lighter;
+    padding: 0 20px;
+    color: white;
+}
+
+.header-nav a:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    top: 25px;
+    width: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.header-nav .active-nav{
+    font-weight: bolder;
+}
+
+.header-nav .active-nav:after {
+    width: 100%;
+}
+
+.header-nav a:hover:after {
+    width: 100%;
+}
+
+header img {
+    margin-top: 0.5em;
+    margin-left: 2em;
+}
+
+
+aside {
+    border-top: #8D41B0 0.5em solid;
+    margin-top: 2em;
+    font-size: 20px;
+    margin-left: 4%;
+    width: 81.5%;
+}
+
+aside a {
+    position: relative;
+    color: black;
+    padding: 4px;
+    font-weight: normal;
+}
+
+aside a:after {
+    content: "";
+    position: absolute;
+    background-color: #8D41B0;
+    height: 3px;
+    top: 27px;
+    width: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.active-menu{
+    font-weight: 900;
+}
+
+.active-menu:after {
+    width: 100%;
+}
+
+
+aside a:hover:after {
+    width: 100%;
+}
+
+aside li {
+    font-weight: bold;
+    padding: 4px;
+}
+
+
+#year, #stud-title {
+    text-align: center;
+}
+#year h1 {
+    padding-bottom: 40px;
+    margin-top: -5.2em;
+    font-size: 64px;
+}
+
+#year h2, #stud-title h2{
+    font-size: 30px;
+    color:#8D41B0;
+    font-weight: normal;
+}
+
+
+.principals {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    width: 80%;
+}
+
+#photos {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    width: 80%;
+}
+
+.pictures {
+    position: relative;
+    display: inline-block;
+    margin: 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.26s;
+}
+
+.overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay:hover>* {
+    transform: translateY(0);
+}
+
+.pictures img {
+    height: 198px;
+    width: 146px;
+    object-fit: cover;
+    background: none;
+}
+
+.pictures img:hover {
+    background: black;
+}
+
+div h3 {
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+
+
+/* Preview-box css starts here */
+.preview-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    max-width: 400px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.preview-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+
+.preview-box .details {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+    justify-content: space-between;
+}
+
+.preview-box .details .title {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.details .title p {
+    margin: 0 5px;
+}
+
+.details .title p.current-img {
+    font-weight: 500;
+}
+
+.details .icon {
+    color: #8D41B0;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.preview-box .image-box {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.image-box .slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8D41B0;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 60px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.slide.prev {
+    left: -40%;
+    background-color: white;
+    padding-right: 64px;
+}
+
+.slide.next {
+    right: -25%;
+    background-color: white;
+    padding-right: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+@media(max-width: 1000px) {
+    .gallery .image {
+        width: calc(100% / 2);
+    }
+}
+
+@media(max-width: 600px) {
+    .gallery .image {
+        width: 100%;
+        padding: 4px;
+    }
+}
